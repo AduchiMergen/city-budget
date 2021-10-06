@@ -1,0 +1,11 @@
+mutation upsert_budget_chief_budgetary_manager($objects: [budget_chief_budgetary_manager_insert_input!]!) {
+  insert_budget_chief_budgetary_manager(
+    objects: $objects,
+    on_conflict: {
+      constraint: chief_budgetary_manager_pkey,
+      update_columns: [name]
+    }
+  ) {
+    affected_rows
+  }
+}
