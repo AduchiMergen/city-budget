@@ -26,7 +26,7 @@
 - [ ] event
 - [ ] expense_goal
 - [ ] expense_item
-- [ ] expense_section
+- [x] expense_section
 - [ ] expense_subsection
 - [ ] expense_type
 - [ ] program

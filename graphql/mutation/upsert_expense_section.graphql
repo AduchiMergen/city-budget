@@ -1,0 +1,11 @@
+mutation upsert_budget_expense_section($objects: [budget_expense_section_insert_input!]!) {
+  insert_budget_expense_section(
+    objects: $objects,
+    on_conflict: {
+      constraint: expense_section_pkey,
+      update_columns: [name]
+    }
+  ) {
+    affected_rows
+  }
+}
