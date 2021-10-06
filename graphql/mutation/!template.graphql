@@ -1,0 +1,13 @@
+# "budget" - postgres db schema name
+# Replace "TABLE" with entity name
+mutation upsert_budget_TABLE($objects: [budget_TABLE_insert_input!]!) {
+  insert_budget_TABLE(
+    objects: $objects,
+    on_conflict: {
+      constraint: TABLE_pkey,
+      update_columns: [name] # Add all fields except pkey!
+    }
+  ) {
+    affected_rows
+  }
+}
